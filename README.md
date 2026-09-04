@@ -107,6 +107,10 @@ bun run dev
 - `bun.lock`: 依存バージョンを固定するロックファイル。変更時もリポジトリで管理します。
 
 ランタイム依存はありません。配布時の入口は `package.json` の `exports` に定義しています。
-誤公開を防ぐため `private: true` としています。パッケージ公開時に解除してください。
+npm への誤公開を防ぐため `private: true` としています。パッケージ公開時に解除してください。
 
 `tests/` 配下に Action 解決、Action Map 切り替え、Axis 合成、デッドゾーン、Gamepad などの単体テストを追加済みです。
+
+## ライセンス
+
+[MIT License](LICENSE)

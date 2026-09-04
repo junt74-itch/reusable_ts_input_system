@@ -258,7 +258,8 @@ TypeScript ライブラリとして独立配布できる構成にします。
 - ライブラリの成果物は `dist/`、ブラウザ確認ページは `dist-demo/` に出力します。
 - 入力ロジックの単体テストには Bun のテストランナーを使用します（`tests/` に実装済み）。
 
-公開 API は `src/index.ts` から提供しています。パッケージは `private: true` です。公開時の名称・ライセンス・対応環境は別途決定します。
+公開 API は `src/index.ts` から提供しています。ライセンスは MIT です。
+npm への誤公開を防ぐためパッケージは `private: true` のままとし、公開パッケージ名と対応環境は別途決定します。
 開発コマンドは [README](../README.md) を参照してください。
 
 ## テスト方針と MVP の受け入れ条件
@@ -331,6 +332,6 @@ MVP 実装に向けて [実装方針書](./design-decisions.md) で確定済み�
 | Pointer | 座標系、監視対象、wheel の単位とフレームごとの蓄積・リセット | 決定済み → [§8.3 PointerDevice](./design-decisions.md#83-pointerdevice) |
 | ノイズ処理 | デッドゾーン方式・既定値、currentDevice の初期値と判定優先順位 | 決定済み → [§7 Processor](./design-decisions.md#7-processor)、[§9 Current Device Detection](./design-decisions.md#9-current-device-detection) |
 | ブラウザ操作 | preventDefault、入力フォーム操作との共存 | 決定済み → [§8.1 KeyboardDevice](./design-decisions.md#81-keyboarddevice) |
-| 配布・互換性 | 対応ブラウザ、公開パッケージ名、ライセンス | 一部未決定（公開パッケージ名・ライセンス・対応ブラウザは別途決定） |
+| 配布・互換性 | 対応ブラウザ、公開パッケージ名、ライセンス | ライセンスは MIT に決定。公開パッケージ名・対応ブラウザは別途決定 |
 
 仕様を変更する際は、MVP 要件・Phase 2 候補・実装状況を併せて更新し、関連するテストで確定した動作を検証します。
